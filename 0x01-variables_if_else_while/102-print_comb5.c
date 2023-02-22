@@ -1,32 +1,36 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - This program prints all possible
- * different combinations of two digits.
- * Return: Always 0 (Success)
+ * main - returns a combination of number
+ * Return: return 0 if successful
  */
+
 int main(void)
 {
-	int i, j;
+        int i, j;
 
-	for (i = '0'; i <= '8'; i++)
-	{
-		for (j = i + 1; j <= '9'; j++)
-		{
-			if (i != j)
-			{
-				putchar(i);
-				putchar(j);
-				if (i != '8' || j != '9')
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-		}
-	}
+        for (i = 0; i < 100; i++)
+        {
+                for (j = 0; j < 100; j++)
+                {
+                        if (i < j)
+                        {
+                                putchar((i / 10) + 48);
+                                putchar((i % 10) + 48);
+                                putchar(' ');
+                                putchar((j / 10) + 48);
+                                putchar((j % 10) + 48);
+                                if (i != 98 || j != 99)
+                                {
+                                        putchar(',');
+                                        putchar(' ');
+                                }
+                        }
+                }
+        }
 
-	putchar('\n');
+        putchar('\n');
 
-	return (0);
-}
+        return (0);
+]
