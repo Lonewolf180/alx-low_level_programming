@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - This function prints the alphabet 10 times
- * in lowercase, followed by a newline
+ * main - This program prints the phrase Hello, World
+ * Return: Always 0 (Success)
  */
-void print_alphabet_x10(void)
+int main(void)
 {
-	int ch, i;
+	char ch[] = "main";
+	int i;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; ch[i] != '\0'; i++)
 	{
-		for (ch = 'a'; ch <= 'z'; ch++)
-		{
-			_putchar(ch);
-		}
-		_putchar('\n');
+		_putchar(ch[i]);
 	}
+
+	_putchar('\n');
+	return (0);
 }
